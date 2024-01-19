@@ -2,7 +2,7 @@ type Props = (value: number) => void;
 
 const Reset = ({ resetFunc }: { resetFunc: Props }) => {
   const clickHandler = () => {
-    resetFunc(0);
+    resetFunc(1);
   };
 
   return (

@@ -12,7 +12,7 @@ describe("<Reset/>", () => {
     console.log(resetFuncMock.mock);
 
     expect(resetFuncMock).toHaveBeenCalledTimes(1);
-    // reset value to 0
-    expect(resetFuncMock).toHaveBeenCalledWith(0);
+    // reset value to 1
+    expect(resetFuncMock).toHaveBeenCalledWith(1);
   });
 });
