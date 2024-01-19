@@ -7,7 +7,14 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      borderWidth: {
+        1: "1px",
+      },
+      borderColor: {
+        1: "#000",
+      },
+    },
   },
   plugins: [],
 };
