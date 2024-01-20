@@ -9,7 +9,7 @@ describe("<Reset/>", () => {
     render(<Reset resetFunc={resetFuncMock} />);
     const resetButton = screen.getByRole("button", { name: /reset/i });
     await user.click(resetButton);
-    console.log(resetFuncMock.mock);
+    // console.log(resetFuncMock.mock);
 
     expect(resetFuncMock).toHaveBeenCalledTimes(1);
     // reset value to 1

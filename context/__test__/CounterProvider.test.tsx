@@ -4,7 +4,6 @@ import About from "@/pages/about";
 import { userEvent } from "@testing-library/user-event";
 
 describe("<CounterProvider/>", () => {
-
   test("should have an initial of 1", () => {
     render(<About />, { wrapper: CounterProvider });
     const displayTag = screen.getByRole("paragraph");
@@ -62,5 +61,3 @@ test("should reset when reset button is clicked", async () => {
     expect(displayTag).toHaveTextContent("1");
   });
 });
-
-

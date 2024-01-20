@@ -11,6 +11,8 @@ describe("<DisplayCounter />", () => {
   test("header is present", () => {
     render(<DisplayCounter value={counterValue} />);
     // in the component
-    screen.getByRole("heading", { name: /Counter Machine Coding/ });
+    expect(
+      screen.getByRole("heading", { name: /Counter Machine Coding/ })
+    ).toBeInTheDocument();
   });
 });
