@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 //github.com/vaskort/custom-hook-test/blob/develop/src/hooks/useFetchedData.test.js#L6
 // just for learning how to test custom hooks
-https: const API_URL = "http://localhost:3000/";
+const API_URL = "http://localhost:3000";
 
 export const useFetchedData = () => {
   const [data, setData] = useState<any>(null);

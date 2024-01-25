@@ -91,3 +91,25 @@ describe("when data fail the fetch", () => {
     });
   });
 });
+
+describe("when data fail the fetch with no message", () => {
+  const mockedError = new Error("");
+
+  beforeEach(() => {
+    jest.resetAllMocks();
+    jest.spyOn(global, "fetch").mockRejectedValue(mockedError);
+    // global.fetch.mockRejectedValue(mockedError);
+  });
+
+  test("should return a default error message", async () => {
+    const { result } = renderHook(() => useFetchedData());
+
+    await waitFor(() => {
+      expect(result.current).toStrictEqual({
+        data: null,
+        loading: false,
+        error: "something wrong",
+      });
+    });
+  });
+});
